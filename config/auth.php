@@ -65,6 +65,12 @@ return [
             'model' => App\Models\User::class,
         ],
 
+        'api' => [
+            'driver' => 'eloquent',
+            'provider' => 'participants',
+            'hash' => true,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

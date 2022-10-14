@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\V1\AuthController;
 use App\Http\Controllers\API\V1\LotteryController;
 use App\Http\Controllers\API\V1\ParticipantController;
 use Illuminate\Http\Request;
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['prefix' => 'v1'], function () {
+    Route::post('login', [AuthController::class, 'login']);
     Route::get('participants', [ParticipantController::class, 'all']);
     Route::post('participants/store', [ParticipantController::class, 'store']);
     Route::put('participants/update/{id}', [ParticipantController::class, 'update']);
