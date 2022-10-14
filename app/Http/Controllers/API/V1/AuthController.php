@@ -34,12 +34,14 @@ class AuthController extends Controller
             $this->validate(request(), [
                 'name' => 'required',
                 'phone' => 'required|unique:users|numeric|regex:/^08[0-9]{9,11}$/',
+                'password' => 'required',
             ], [
                 'name.required' => 'Nama tidak boleh kosong',
                 'phone.required' => 'Nomor telepon tidak boleh kosong',
                 'phone.unique' => 'Nomor telepon sudah terdaftar',
                 'phone.numeric' => 'Nomor telepon harus berupa angka',
                 'phone.regex' => 'Nomor telepon tidak valid',
+                'password.required' => 'Password tidak boleh kosong',
             ]);
             $cupon = User::max('cupon') + 1;
             $data['cupon'] = str_pad($cupon, 5, '0', STR_PAD_LEFT);
