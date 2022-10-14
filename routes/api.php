@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\V1\LotteryController;
+use App\Http\Controllers\API\V1\ParticipantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1'], function () {
+    Route::get('participants', [ParticipantController::class, 'all']);
+    Route::post('participants/store', [ParticipantController::class, 'store']);
+    Route::put('participants/update/{id}', [ParticipantController::class, 'update']);
+    Route::delete('participants/destroy/{id}', [ParticipantController::class, 'destroy']);
+
+    // lottery
+    Route::get('lottery', [LotteryController::class, 'lottery']);
 });
