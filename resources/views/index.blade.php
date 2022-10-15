@@ -18,21 +18,47 @@
     }
 </style>
     <div class="px-5 md:px-10 lg:px-20 mt-12">
-        <div class=" h-96 md:h-100 lg:h-120 mt-60 md:mt-32">
+        <div class="mt-40 md:mt-32 pb-10">
             <h3 class="text-center text-xl font-medium">Ambil Undian</h3>
             <div class="flex justify-center">
                 <form class="mt-10 w-5/6 lg:w-2/6 " action="" method="post">
                     <div class="mb-3">
-                        <input class="bg-gray-100 rounded-lg p-3 w-full text-sm text-gray-600 font-medium  focus:ring-4 focus:outline-0 focus:ring-emerald-200 duration-150" type="text" placeholder="Nama Lengkap">
+                        <input class="bg-gray-100 rounded-lg p-3 w-full text-sm text-gray-600 font-medium  focus:ring-4 focus:outline-0 focus:ring-emerald-100 duration-150" type="text" placeholder="Nama Lengkap">
                     </div>
                     <div class="mb-3">
-                        <input class="bg-gray-100 rounded-lg p-3 w-full text-sm text-gray-600 font-medium  focus:ring-4 focus:outline-0 focus:ring-emerald-200 duration-150 appearance-none" type="number" placeholder="Nomor HP">
+                        <input class="bg-gray-100 rounded-lg p-3 w-full text-sm text-gray-600 font-medium  focus:ring-4 focus:outline-0 focus:ring-emerald-100 duration-150 appearance-none" type="number" placeholder="Nomor HP">
                     </div>
                     <div class="mb-3">
-                        <button type="button" class="p-3 bg-emerald-500 rounded-lg text-sm font-medium text-white w-full">Ambil Nomor Undian</button>
+                        <button type="button" class="p-3 bg-emerald-500 rounded-lg text-sm font-medium text-white w-full hover:bg-emerald-600 duration-150">Ambil Nomor Undian</button>
                     </div>
                 </form>
 
+            </div>
+            <div class="mt-5 bg-rose-200 rounded p-4 w-5/6 lg:w-3/6 mx-auto text-center">
+               <span class="text-rose-500 text-sm font-medium">Maaf, nomor HP anda sudah terdaftar, silahkan <a href="{{ route('check') }}" class="font-bold underline underline-offset-2">Cek Undian</a></span>
+            </div>
+            <div class="mt-5 bg-emerald-100 rounded p-4 w-5/6 lg:w-3/6 mx-auto text-start">
+               <h5 class="font-medium text-lg text-emerald-500">Berhasil Daftar</h5>
+               <table class="table-auto mt-5 text-sm text-gray-700">
+                  <tbody class="text-start">
+                     <tr>
+                        <th class="w-40 text-start">Nama Lengkap</th>
+                        <td>:</td>
+                        <td>reza</td>
+                     </tr>
+                     <tr>
+                        <th class="text-start">No Hape</th>
+                        <td>:</td>
+                        <td>reza</td>
+                     </tr>
+                     <tr>
+                        <th class="text-start">Nomor Undian</th>
+                        <td>:</td>
+                        <td>234</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div class="mt-5 text-center text-xs text-gray-500">Silahkan screenshoot halaman ini sebagai bukti yang sah</div>
             </div>
         </div>
     </div>

@@ -13,10 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('index', ['active' => 'index']);
+})->name('index');
+
+Route::get('cek', function () {
+    return view('check', ['active' => 'check']);
+})->name('check');
 
 
-
-Route::view('/', 'index');
+// Route::view('/', 'index');
+// Route::view('/cek', 'check')->name('check');
